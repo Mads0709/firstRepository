@@ -1,17 +1,17 @@
-namespace IsLeapYear.Tests;
-
+namespace Program.Tests;
 
 public class IsLeapYearTest
 {
     [Fact]
-    public void Test1()
+    public void Leap_Year_Test()
     {
 
         //Arrange
-        var year = new LeapYear();
+        int year = 1600;
+        var LeapYear = new LeapYear();
 
         //Act
-        var result = year.IsLeapYear(9);
+        var result = LeapYear.IsLeapYear(year);
 
         //Assert
         result.Should().Be(false);
