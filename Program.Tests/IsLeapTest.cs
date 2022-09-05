@@ -8,12 +8,18 @@ public class IsLeapYearTest
 
         //Arrange
         int year = 1600;
-        var LeapYear = new LeapYear();
+        var leapYear = new LeapYear();
 
         //Act
-        var result = LeapYear.IsLeapYear(year);
+        var result = leapYear.IsLeapYear(year);
 
         //Assert
-        result.Should().Be(false);
+        result.Should().Be(true);
+    }
+
+    [Fact]
+    public void Write(){
+        var program = new Program();
+
     }
 }

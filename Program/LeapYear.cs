@@ -3,6 +3,7 @@ namespace Program;
 public class LeapYear{
 
     public bool IsLeapYear(int year){
+
         if(DateTime.IsLeapYear(year)){
             return true;
         }
@@ -22,4 +23,5 @@ public class LeapYear{
             return false;
     */
     }
+
 }
