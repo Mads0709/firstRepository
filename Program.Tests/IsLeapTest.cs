@@ -3,7 +3,7 @@ namespace Program.Tests;
 public class IsLeapYearTest
 {
     [Fact]
-    public void Leap_Year_Test()
+    public void Leap_Year_year1600()
     {
 
         //Arrange
@@ -18,8 +18,17 @@ public class IsLeapYearTest
     }
 
     [Fact]
-    public void Write(){
-        var program = new Program();
+    public void Leap_Year_year1700()
+    {
 
+        //Arrange
+        int year = 1700;
+        var leapYear = new LeapYear();
+
+        //Act
+        var result = leapYear.IsLeapYear(year);
+
+        //Assert
+        result.Should().Be(false);
     }
 }
