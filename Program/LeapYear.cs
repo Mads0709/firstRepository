@@ -3,6 +3,10 @@ namespace Program;
 public class LeapYear{
 
     public bool IsLeapYear(int year){
+    
+        if(year < 1582){
+            return false;
+        }
 
         if(DateTime.IsLeapYear(year)){
             return true;
@@ -11,17 +15,31 @@ public class LeapYear{
         {
             return false;
         }
-        /*if(year % 4 == 0 || year % 400 == 0){
+
+
+        /*if(year % 4 == 0 && year % 400 != 0){
             return true;
         } 
-        else if (year % 100 == 0)
-        {
-            return false;
+        if(year % 4 == 0 && year 400 == 0){
+            return true;
         }
-        else
-
             return false;
     */
     }
 
+    public bool IsAnInteger(int year){
+        if (int.TryParse(Console.ReadLine(), out year)){
+            throw new Exception("Wrong input type");
+        }
+        return true;
+        
+    }
+
+
+    public bool NotALeapYear(int year){
+        if (year < 1582){
+            throw new Exception("No leapyears before 1582");
+        }
+        return true;
+    }
 }
